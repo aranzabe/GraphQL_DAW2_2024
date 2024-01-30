@@ -2,7 +2,8 @@
 
 Ejemplo de consultas 
 
-``Graphql
+''GraphQL
+
 query consultaporID{
  persona(id: 2) {
     id
@@ -52,4 +53,3 @@ mutation actualizar {
  }
 }
 
-``
