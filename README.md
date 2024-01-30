@@ -1,6 +1,8 @@
 # GraphQL_DAW2_2024
 
-Ejemplo de consultas 
+En el ejemplo conviven rutas API Rest y GraphQL.
+
+Ejemplo de consultas GraphQL:
 
 ```GraphQL
 
