@@ -11,6 +11,7 @@ class Server {
     constructor() {
         this.app = express();
         this.usuariosPath = '/api/';
+        this.graphQLPath = '/graphql';
 
         //Middlewares
         this.middlewares();
@@ -36,12 +37,12 @@ class Server {
     }
 
     applyGraphQLMiddleware() {
-        this.app.use('/graphql', express.json(), expressMiddleware(this.serverGraphQL));
+        this.app.use(this.graphQLPath , express.json(), expressMiddleware(this.serverGraphQL));
     }
 
     listen() {
         this.app.listen(process.env.PORT, () => {
-            console.log(`Servidor escuchando en: ${process.env.PORT}`);
+            console.log(`Servidor escuchando en: ${process.env.URL}:${process.env.PORT}${this.graphQLPath}`);
         })
         this.applyGraphQLMiddleware()
     }
