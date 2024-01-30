@@ -1,6 +1,7 @@
 # GraphQL_DAW2_2024
 
 En el ejemplo 'EjemploGraphQL' conviven rutas API Rest y GraphQL.
+GraphQLSolo contiene el servicio del ejemplo solo con GraphQL sin API Rest.
 
 Ejemplo de consultas GraphQL:
 
