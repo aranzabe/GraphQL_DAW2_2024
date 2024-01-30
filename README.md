@@ -2,7 +2,7 @@
 
 Ejemplo de consultas 
 
-''GraphQL
+```GraphQL
 
 query consultaporID{
  persona(id: 2) {
