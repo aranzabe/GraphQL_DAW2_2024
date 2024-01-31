@@ -8,6 +8,7 @@ const typeDefs = gql`
     edad: Int!
  }
 
+
  type Query {
     personas: [Persona]
     persona(id: ID!): Persona
