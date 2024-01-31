@@ -138,3 +138,4 @@ query {
 }
 ```
 
+Para el ejemplo de Laravel podemos elegir entre dos alternativas: rebing/graphql-laravel o nuwave/lighthouse. Elegimos esta última al ser más recomendada por su flexibilidad y su integración con Eloquent. Seguimos la siguiente [documentación:](https://lighthouse-php.com/tutorial/#what-is-lighthouse)
