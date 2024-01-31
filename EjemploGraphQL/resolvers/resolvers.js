@@ -1,10 +1,10 @@
 const { v4: uuidv4 } = require('uuid');
-const { addPersona, getPersona, removePersonaAt, updatePersonaAt, valores } = require('../database/basededatos.js');
+const { addPersona, getPersona, removePersonaAt, updatePersonaAt, getPersonas } = require('../database/basededatos.js');
 const { Persona } = require('../models/Persona')
 
 const resolvers = {
  Query: {
-    personas: () => valores,
+    personas: () => getPersonas(),
     persona: (_, { id }) => getPersona(id),
  },
  Mutation: {
@@ -14,7 +14,7 @@ const resolvers = {
       return persona;
     },
     eliminarPersona: (_, { id }) => {
-      const index = valores.findIndex((persona) => persona.id === id);
+      const index = getPersonas().findIndex((persona) => persona.id === id);
       if (index !== -1) {
         removePersonaAt(index);
         return true;
@@ -22,9 +22,9 @@ const resolvers = {
       return false;
     },
     actualizarPersona: (_, { id, nombre, edad }) => {
-      const index = valores.findIndex((persona) => persona.id === id);
+      const index = getPersonas().findIndex((persona) => persona.id === id);
       if (index !== -1) {
-        const personaActualizada = new Persona(id ||valores[index].id, nombre || valores[index].nombre, edad || valores[index].edad);
+        const personaActualizada = new Persona(id ||getPersonas()[index].id, nombre || getPersonas()[index].nombre, edad || getPersonas()[index].edad);
         updatePersonaAt(index, personaActualizada);
         return personaActualizada;
       }

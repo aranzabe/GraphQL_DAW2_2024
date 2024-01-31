@@ -6,6 +6,10 @@ const addPersona = (p) => {
     valores.push(p);
 }
 
+const getPersonas = () => {
+    return valores;
+}
+
 const getPersona = (i) => {
     return valores[i];
 }
@@ -19,7 +23,8 @@ const updatePersonaAt = (i, p) => {
 }
 
 module.exports = {
-    valores,
+    // valores,
+    getPersonas,
     addPersona,
     getPersona,
     removePersonaAt,
