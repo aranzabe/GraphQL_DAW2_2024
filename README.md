@@ -1,9 +1,9 @@
 # GraphQL_DAW2_2024
 
-En el ejemplo 'EjemploGraphQL' conviven rutas API Rest y GraphQL.
-'GraphQLSolo' contiene el servicio del ejemplo solo con GraphQL sin API Rest; además incluye un ejemplo de uso desde el cliente.
+En el ejemplo ***'EjemploGraphQL'*** conviven rutas API Rest y GraphQL.
+***'GraphQLSolo'*** contiene el servicio del ejemplo solo con GraphQL sin API Rest; además incluye un ejemplo de uso desde el cliente.
 
-Ejemplo de consultas GraphQL para los ejemplos 'EjemploGraphQL' y 'GraphQLSolo':
+Ejemplo de consultas **GraphQL** para los ejemplos *'EjemploGraphQL'* y *'GraphQLSolo'*:
 
 ```GraphQL
 
@@ -57,8 +57,8 @@ mutation actualizar {
 }
 ```
 
-El ejemplo 'GraphQLyMongoose', extrae los datos de Mongo a través de Mongoose. El ejemplo está basado en el que se hizo para API Rest por lo que en la app conviven los dos: API Rest y GraphQL. La base de datos de ejemplo está en la carpeta 'dump'.
-Ejemplo de consultas GraphQL para este servicio:
+El ejemplo ***'GraphQLyMongoose'***, extrae los datos de Mongo a través de **Mongoose**. El ejemplo está basado en el que se hizo para API Rest por lo que en la app conviven los dos: API Rest y GraphQL. La base de datos de ejemplo está en la carpeta *'dump'*.
+Ejemplo de consultas **GraphQL** para este servicio:
 
 ```GraphQL
 query {
@@ -138,4 +138,4 @@ query {
 }
 ```
 
-Para el ejemplo de Laravel podemos elegir entre dos alternativas: rebing/graphql-laravel o nuwave/lighthouse. Elegimos esta última al ser más recomendada por su flexibilidad y su integración con Eloquent. Seguimos la siguiente [documentación:](https://lighthouse-php.com/tutorial/#what-is-lighthouse)
+Para el ejemplo de **Laravel** podemos elegir entre dos alternativas: ***rebing/graphql-laravel*** o ***nuwave/lighthouse***. Elegimos esta última al ser más recomendada por su flexibilidad y su integración con *Eloquent*. Seguimos la siguiente [documentación:](https://lighthouse-php.com/tutorial/#what-is-lighthouse)
