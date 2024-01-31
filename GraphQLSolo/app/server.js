@@ -27,6 +27,9 @@ class Server {
     middlewares() {
         this.app.use(cors());
         this.app.use(express.json());
+
+        //Directorio públco: http://localhost:9090/  --> Habilitamos esto para ver como se cargaría una imagen desde el cliente.
+        this.app.use(express.static('public'));
     }
 
 
