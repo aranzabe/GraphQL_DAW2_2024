@@ -3,14 +3,14 @@ const { gql } = require('graphql-tag');;
 const typeDefs = gql`
 
  type Persona {
-    id: ID!
+    id: Int!
     nombre: String!
     edad: Int!
  }
 
  type Query {
     personas: [Persona]
-    persona(id: ID!): Persona
+    persona(id: Int!): Persona
  }
 
  type Mutation {
