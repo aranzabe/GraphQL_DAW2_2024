@@ -5,7 +5,13 @@ const { Persona } = require('../models/Persona')
 const resolvers = {
  Query: {
     personas: () => getPersonas(),
-    persona: (_, { id }) => getPersona(id),
+    persona: (_, { id }) => {
+      const resp = getPersona(id)
+      if (resp!=null){
+        return getPersona(id);
+      } else {
+        throw new Error("No se pudo encontrar la persona.");
+      }},
  },
  Mutation: {
     agregarPersona: (_, { id, nombre, edad }) => {
@@ -19,7 +25,7 @@ const resolvers = {
         removePersonaAt(index);
         return true;
       }
-      return false;
+      throw new Error("No se pudo encontrar la persona para eliminar.");
     },
     actualizarPersona: (_, { id, nombre, edad }) => {
       const index = getPersonas().findIndex((persona) => persona.id === id);
@@ -28,7 +34,7 @@ const resolvers = {
         updatePersonaAt(index, personaActualizada);
         return personaActualizada;
       }
-      return null;
+      throw new Error("No se pudo encontrar la persona para actualizar.");
     },
  },
 };
