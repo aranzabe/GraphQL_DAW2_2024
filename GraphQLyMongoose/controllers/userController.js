@@ -9,12 +9,14 @@ const usuariosGet = async () => {
             console.log('Listado correcto!');
             return (personas);
         } else {
-            console.log('No hay registros!');
-            return null;
+            throw new Error("No hay registros.");
+            //console.log('No hay registros!');
+            //return null;
         }
     } catch (error) {
-        console.error('Error al obtener usuarios:', error);
-        return null
+        throw new Error('Error al obtener usuarios:', error);
+        // console.error('Error al obtener usuarios:', error);
+        // return null
     }
 };
 
@@ -28,12 +30,14 @@ const usuarioGet = async (pid) => {
             console.log('Usuario encontrado!');
             return usuario
         } else {
-            console.log('Usuario no encontrado!');
-            return null
+            throw new Error("Usuario no encontrado!");
+            // console.log('Usuario no encontrado!');
+            // return null
         }
     } catch (error) {
-        console.error('Error al obtener usuario por ID:', error);
-        return null
+        throw new Error('Error al obtener usuario por ID:', error);
+        // console.error('Error al obtener usuario por ID:', error);
+        // return null
     }
 }
 
@@ -44,8 +48,9 @@ const usuariosPost = async (pers) => {
         console.log('Usuario registrado correctamente!', usuario);
         return usuario;
     } catch (error) {
-        console.error('Error al registrar usuario:', error);
-        return null; 
+        throw new Error('Error al registrar usuario!', error);
+        // console.error('Error al registrar usuario:', error);
+        // return null; 
     }
 }
 
@@ -59,12 +64,14 @@ const usuariosPut = async (id, pers) => {
             console.log('Usuario actualizado correctamente!');
             return usuarioActualizado.matchedCount
         } else {
-            console.log('Usuario no encontrado!');
-            return 0;
+            throw new Error('Usuario no encontrado!', error);
+            // console.log('Usuario no encontrado!');
+            // return 0;
         }
     } catch (error) {
-        console.error('Error al actualizar usuario:', error);
-        return -1
+        throw new Error('Error al actualizar usuario!', error);
+        // console.error('Error al actualizar usuario:', error);
+        // return -1
     }
 };
 
@@ -78,12 +85,14 @@ const usuariosDelete = async (pid) => {
             console.log('Usuario eliminado correctamente!');
             return true;
         } else {
-            console.log('Usuario no encontrado!');
-            return false
+            throw new Error('Usuario no encontrado!', error);
+            // console.log('Usuario no encontrado!');
+            // return false
         }
     } catch (error) {
-        console.error('Error al eliminar usuario:', error);
-        return false
+        throw new Error('Error al eliminar usuario!', error);
+        // console.error('Error al eliminar usuario:', error);
+        // return false
     }
 };
 

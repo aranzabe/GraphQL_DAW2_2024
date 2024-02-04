@@ -18,7 +18,10 @@ class Server {
 
         this.conectarMongoose();
 
-        this.serverGraphQL =  new ApolloServer({ typeDefs, resolvers });
+        this.serverGraphQL =  new ApolloServer({ typeDefs, resolvers , formatError: (error) => {
+            // Devuelve solo el mensaje del error y no el volcado de toda la excepción GraphQL.
+            return { message: error.message };
+        }});
     }
 
 

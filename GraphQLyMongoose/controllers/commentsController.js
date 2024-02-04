@@ -15,8 +15,9 @@ const comentariosGet = async () => {
             return null;
         }
     } catch (error) {
-        console.error('Error al obtener comentarios:', error);
-        return null;
+        throw new Error('Error al obtener comentarios!', error);
+        // console.error('Error al obtener comentarios:', error);
+        // return null;
     }
 };
 
@@ -53,8 +54,9 @@ const comentariosGetAsignados = async () => {
         return(comentariosPorUsuario)
 
     } catch (error) {
-        console.error('Error al obtener comentarios por usuario:', error);
-        return null
+        throw new Error('Error al obtener comentarios por usuario!', error);
+        // console.error('Error al obtener comentarios por usuario:', error);
+        // return null
     }     
 }
 
@@ -97,8 +99,9 @@ const comentarioGetAsignadoA = async (userId) => {
         return(comentariosPorUsuario);
 
     } catch (error) {
-        console.error('Error al obtener comentarios por usuario:', error);
-        return null
+        throw new Error('Error al obtener comentarios por usuario!', error);
+        // console.error('Error al obtener comentarios por usuario:', error);
+        // return null
     }     
 }
 
