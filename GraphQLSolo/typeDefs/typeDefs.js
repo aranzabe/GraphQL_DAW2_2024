@@ -14,10 +14,11 @@ const typeDefs = gql`
  }
 
  type Mutation {
-    agregarPersona(id:Int, nombre: String!, edad: Int!): Persona
+    agregarPersona(id:Int!, nombre: String!, edad: Int!): Persona
     eliminarPersona(id: Int!): Boolean
     actualizarPersona(id: Int, nombre: String, edad: Int): Persona
  }
 `
+
 
 module.exports = typeDefs;
