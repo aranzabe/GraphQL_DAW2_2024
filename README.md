@@ -139,3 +139,63 @@ query {
 ```
 
 Para el ejemplo de **Laravel** podemos elegir entre dos alternativas: ***rebing/graphql-laravel*** o ***nuwave/lighthouse***. Elegimos esta última al ser más recomendada por su flexibilidad y su integración con *Eloquent*. Seguimos la siguiente [documentación:](https://lighthouse-php.com/tutorial/#what-is-lighthouse)
+
+Consultas para Laravel:
+```GraphQL
+
+query PostsGeneral {
+  posts {
+    id
+    content
+    title
+  }
+  
+}
+
+query  PostPorId{
+post(id: 2) {
+    content
+    id
+  }
+}
+
+	query UsuariosPorEmail {
+  user(email:"ecummerata@example.org") {
+    id
+    name
+    email
+    posts {
+      id
+      title
+      content
+    }
+  }
+}
+
+
+	query UsuariosPorId {
+  user(id:2) {
+    id
+    name
+    email
+    posts {
+      id
+      title
+      content
+    }
+  }
+}
+
+query postsYusuarios {
+  posts {
+    id
+    title
+    content
+    author {
+      id
+      name
+      email
+    }
+  }
+}
+```
