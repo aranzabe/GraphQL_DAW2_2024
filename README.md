@@ -153,13 +153,13 @@ query PostsGeneral {
 }
 
 query  PostPorId{
-post(id: 2) {
+  post(id: 2) {
     content
     id
   }
 }
 
-	query UsuariosPorEmail {
+query UsuariosPorEmail {
   user(email:"ecummerata@example.org") {
     id
     name
@@ -173,7 +173,7 @@ post(id: 2) {
 }
 
 
-	query UsuariosPorId {
+query UsuariosPorId {
   user(id:2) {
     id
     name
